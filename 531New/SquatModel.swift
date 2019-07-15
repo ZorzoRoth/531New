@@ -31,4 +31,6 @@ class Squat {
         return (squatMax/100)*95
     }
     
+    
+    
 }
