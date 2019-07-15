@@ -12,6 +12,9 @@
 		D02878C822DA67E4002FA3FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02878C622DA67E4002FA3FF /* Main.storyboard */; };
 		D02878CA22DA67E5002FA3FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02878C922DA67E5002FA3FF /* Assets.xcassets */; };
 		D02878CD22DA67E5002FA3FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02878CB22DA67E5002FA3FF /* LaunchScreen.storyboard */; };
+		D08C6C4922DBF3810074F736 /* SquatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C6C4822DBF3810074F736 /* SquatModel.swift */; };
+		D08C6C4B22DBF39D0074F736 /* OverheadpressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C6C4A22DBF39D0074F736 /* OverheadpressModel.swift */; };
+		D08C6C4F22DBF3C20074F736 /* BenchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C6C4E22DBF3C20074F736 /* BenchModel.swift */; };
 		D0BCED9622DBBCFF00EC50AD /* DeadliftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BCED9522DBBCFF00EC50AD /* DeadliftModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 		D02878C922DA67E5002FA3FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D02878CC22DA67E5002FA3FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D02878CE22DA67E5002FA3FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D08C6C4822DBF3810074F736 /* SquatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatModel.swift; sourceTree = "<group>"; };
+		D08C6C4A22DBF39D0074F736 /* OverheadpressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverheadpressModel.swift; sourceTree = "<group>"; };
+		D08C6C4E22DBF3C20074F736 /* BenchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchModel.swift; sourceTree = "<group>"; };
 		D0BCED9522DBBCFF00EC50AD /* DeadliftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadliftModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +68,10 @@
 				D02878C922DA67E5002FA3FF /* Assets.xcassets */,
 				D02878CB22DA67E5002FA3FF /* LaunchScreen.storyboard */,
 				D02878CE22DA67E5002FA3FF /* Info.plist */,
+				D08C6C4822DBF3810074F736 /* SquatModel.swift */,
+				D08C6C4A22DBF39D0074F736 /* OverheadpressModel.swift */,
 				D0BCED9522DBBCFF00EC50AD /* DeadliftModel.swift */,
+				D08C6C4E22DBF3C20074F736 /* BenchModel.swift */,
 			);
 			path = 531New;
 			sourceTree = "<group>";
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08C6C4F22DBF3C20074F736 /* BenchModel.swift in Sources */,
 				D02878C522DA67E4002FA3FF /* ViewController.swift in Sources */,
 				D02878C322DA67E4002FA3FF /* AppDelegate.swift in Sources */,
+				D08C6C4922DBF3810074F736 /* SquatModel.swift in Sources */,
+				D08C6C4B22DBF39D0074F736 /* OverheadpressModel.swift in Sources */,
 				D0BCED9622DBBCFF00EC50AD /* DeadliftModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
