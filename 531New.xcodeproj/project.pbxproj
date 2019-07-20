@@ -17,6 +17,9 @@
 		D08C6C4B22DBF39D0074F736 /* OverheadpressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C6C4A22DBF39D0074F736 /* OverheadpressModel.swift */; };
 		D08C6C4F22DBF3C20074F736 /* BenchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C6C4E22DBF3C20074F736 /* BenchModel.swift */; };
 		D0BCED9622DBBCFF00EC50AD /* DeadliftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BCED9522DBBCFF00EC50AD /* DeadliftModel.swift */; };
+		D0EFF3AF22E3CF9A00EABA21 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EFF3AE22E3CF9A00EABA21 /* TodoTableViewController.swift */; };
+		D0EFF3B722E3D57900EABA21 /* Todos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0EFF3B522E3D57900EABA21 /* Todos.xcdatamodeld */; };
+		D0EFF3BB22E3D97100EABA21 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EFF3BA22E3D97100EABA21 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		D08C6C4A22DBF39D0074F736 /* OverheadpressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverheadpressModel.swift; sourceTree = "<group>"; };
 		D08C6C4E22DBF3C20074F736 /* BenchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchModel.swift; sourceTree = "<group>"; };
 		D0BCED9522DBBCFF00EC50AD /* DeadliftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadliftModel.swift; sourceTree = "<group>"; };
+		D0EFF3AE22E3CF9A00EABA21 /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		D0EFF3B622E3D57900EABA21 /* Todos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todos.xcdatamodel; sourceTree = "<group>"; };
+		D0EFF3BA22E3D97100EABA21 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +70,9 @@
 		D02878C122DA67E4002FA3FF /* 531New */ = {
 			isa = PBXGroup;
 			children = (
+				D0EFF3B422E3D56200EABA21 /* CoreData */,
+				D0EFF3BC22E3DC8C00EABA21 /* VC */,
 				D02878C222DA67E4002FA3FF /* AppDelegate.swift */,
-				D02878C422DA67E4002FA3FF /* ViewController.swift */,
 				D035907E22E36A950027E2F9 /* WorkoutLogTableViewController.swift */,
 				D02878C622DA67E4002FA3FF /* Main.storyboard */,
 				D02878C922DA67E5002FA3FF /* Assets.xcassets */,
@@ -77,6 +84,24 @@
 				D08C6C4E22DBF3C20074F736 /* BenchModel.swift */,
 			);
 			path = 531New;
+			sourceTree = "<group>";
+		};
+		D0EFF3B422E3D56200EABA21 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D0EFF3B522E3D57900EABA21 /* Todos.xcdatamodeld */,
+				D0EFF3BA22E3D97100EABA21 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D0EFF3BC22E3DC8C00EABA21 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				D02878C422DA67E4002FA3FF /* ViewController.swift */,
+				D0EFF3AE22E3CF9A00EABA21 /* TodoTableViewController.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +176,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D08C6C4F22DBF3C20074F736 /* BenchModel.swift in Sources */,
+				D0EFF3B722E3D57900EABA21 /* Todos.xcdatamodeld in Sources */,
 				D02878C522DA67E4002FA3FF /* ViewController.swift in Sources */,
 				D02878C322DA67E4002FA3FF /* AppDelegate.swift in Sources */,
 				D08C6C4922DBF3810074F736 /* SquatModel.swift in Sources */,
+				D0EFF3BB22E3D97100EABA21 /* CoreDataStack.swift in Sources */,
 				D08C6C4B22DBF39D0074F736 /* OverheadpressModel.swift in Sources */,
+				D0EFF3AF22E3CF9A00EABA21 /* TodoTableViewController.swift in Sources */,
 				D035907F22E36A950027E2F9 /* WorkoutLogTableViewController.swift in Sources */,
 				D0BCED9622DBBCFF00EC50AD /* DeadliftModel.swift in Sources */,
 			);
@@ -356,6 +384,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0EFF3B522E3D57900EABA21 /* Todos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0EFF3B622E3D57900EABA21 /* Todos.xcdatamodel */,
+			);
+			currentVersion = D0EFF3B622E3D57900EABA21 /* Todos.xcdatamodel */;
+			path = Todos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D02878B722DA67E4002FA3FF /* Project object */;
 }
