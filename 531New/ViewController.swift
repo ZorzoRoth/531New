@@ -36,6 +36,25 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     let pickerData = [["Squat","Overhead Press","Deadlift","Bench Press"],["Week 1","Week 2","Week 3" ,"Week 4"]]
     
+    var squatWeekOneWeight = ""
+    var squatWeekTwoWeight = ""
+    var squatWeekThreeWeight = ""
+    var squatWeekFourWeight = ""
+    
+    var overheadpressWeekOneWeight = ""
+    var overheadpressWeekTwoWeight = ""
+    var overheadpressWeekThreeWeight = ""
+    var overheadpressWeekFourWeight = ""
+   
+    var deadliftWeekOneWeight = ""
+    var deadliftWeekTwoWeight = ""
+    var deadliftWeekThreeWeight = ""
+    var deadliftWeekFourWeight = ""
+    
+    var benchpressWeekOneWeight = ""
+    var benchpressWeekTwoWeight = ""
+    var benchpressWeekThreeWeight = ""
+    var benchpressWeekFourWeight = ""
     
 
     override func viewDidLoad() {
@@ -64,6 +83,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if let benchpressOneRepMaxDisplayed = savedBenchpressOneRepMax as? String {
             benchpressOneRepMax.text = benchpressOneRepMaxDisplayed
         }
+        
+        
+        
         
         
     }
@@ -110,160 +132,206 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         weekLabel.text =  week
         
         
+        
+        
         // Squat
         
         
         
         if exercise == "Squat" && week == "Week 1" {
             
-            setOneWeight.text = "5 x " + String(ceil(squatWeight.weekOne()))
-            setTwoWeight.text = "5 x " + String(ceil(squatWeight.weekOne()))
-            setThreeWeight.text = "5 x " + String(ceil(squatWeight.weekOne()))
-            setFourWeight.text = "5 x " + String(ceil(squatWeight.weekOne()))
-            setFiveWeight.text = "5 x " + String(ceil(squatWeight.weekOne()))
-            
-            /*
-            setOneSwitch.isOn = false
-            setTwoSwitch.isOn = false
-            setThreeSwitch.isOn = false
-            setFourSwitch.isOn = false
-            setFiveSwitch.isOn = false
-            */
+            squatWeekOneWeight = "5 x " + String(ceil(squatWeight.weekOne()))
+            setOneWeight.text = squatWeekOneWeight
+            setTwoWeight.text = squatWeekOneWeight
+            setThreeWeight.text = squatWeekOneWeight
+            setFourWeight.text = squatWeekOneWeight
+            setFiveWeight.text = squatWeekOneWeight
+
+            resetSwitches()
             
         }
             
         else if exercise == "Squat" && week == "Week 2" {
-            setOneWeight.text = "3 x " + String(ceil(squatWeight.weekTwo()))
-            setTwoWeight.text = "3 x " + String(ceil(squatWeight.weekTwo()))
-            setThreeWeight.text = "3 x " + String(ceil(squatWeight.weekTwo()))
-            setFourWeight.text = "3 x " + String(ceil(squatWeight.weekTwo()))
-            setFiveWeight.text = "3 x " + String(ceil(squatWeight.weekTwo()))
+            
+            squatWeekTwoWeight = "3 x " + String(ceil(squatWeight.weekTwo()))
+            setOneWeight.text = squatWeekTwoWeight
+            setTwoWeight.text = squatWeekTwoWeight
+            setThreeWeight.text = squatWeekTwoWeight
+            setFourWeight.text = squatWeekTwoWeight
+            setFiveWeight.text = squatWeekTwoWeight
+            resetSwitches()
         }
         
         else if exercise == "Squat" && week == "Week 3" {
-            setOneWeight.text = "2 x " + String(ceil(squatWeight.weekThree()))
-            setTwoWeight.text = "2 x " + String(ceil(squatWeight.weekThree()))
-            setThreeWeight.text = "2 x " + String(ceil(squatWeight.weekThree()))
-            setFourWeight.text = "2 x " + String(ceil(squatWeight.weekThree()))
-            setFiveWeight.text = "2 x " + String(ceil(squatWeight.weekThree()))
+            squatWeekThreeWeight = "2 x " + String(ceil(squatWeight.weekThree()))
+            setOneWeight.text = squatWeekThreeWeight
+            setTwoWeight.text = squatWeekThreeWeight
+            setThreeWeight.text = squatWeekThreeWeight
+            setFourWeight.text = squatWeekThreeWeight
+            setFiveWeight.text = squatWeekThreeWeight
+            resetSwitches()
         }
         
         else if exercise == "Squat" && week == "Week 4" {
-            setOneWeight.text = "1 x " + String(ceil(squatWeight.weekFour()))
-            setTwoWeight.text = "1 x " + String(ceil(squatWeight.weekFour()))
-            setThreeWeight.text = "1 x " + String(ceil(squatWeight.weekFour()))
-            setFourWeight.text = "1 x " + String(ceil(squatWeight.weekFour()))
-            setFiveWeight.text = "1 x " + String(ceil(squatWeight.weekFour()))
+            squatWeekFourWeight = "1 x " + String(ceil(squatWeight.weekFour()))
+            setOneWeight.text = squatWeekFourWeight
+            setTwoWeight.text = squatWeekFourWeight
+            setThreeWeight.text = squatWeekFourWeight
+            setFourWeight.text = squatWeekFourWeight
+            setFiveWeight.text = squatWeekFourWeight
+            resetSwitches()
         }
         
         
         // Overheadpress
             
         else if exercise == "Overhead Press" && week == "Week 1" {
-            setOneWeight.text = "5 x " + String(ceil(overheadpressWeight.weekOne()))
-            setTwoWeight.text = "5 x " + String(ceil(overheadpressWeight.weekOne()))
-            setThreeWeight.text = "5 x " + String(ceil(overheadpressWeight.weekOne()))
-            setFourWeight.text = "5 x " + String(ceil(overheadpressWeight.weekOne()))
-            setFiveWeight.text = "5 x " + String(ceil(overheadpressWeight.weekOne()))
+            
+            overheadpressWeekOneWeight = "5 x " + String(ceil(overheadpressWeight.weekOne()))
+            setOneWeight.text = overheadpressWeekOneWeight
+            setTwoWeight.text = overheadpressWeekOneWeight
+            setThreeWeight.text = overheadpressWeekOneWeight
+            setFourWeight.text = overheadpressWeekOneWeight
+            setFiveWeight.text = overheadpressWeekOneWeight
+            resetSwitches()
             
         }
             
         else if exercise == "Overhead Press" && week == "Week 2" {
-            setOneWeight.text = "3 x " + String(ceil(overheadpressWeight.weekTwo()))
-            setTwoWeight.text = "3 x " + String(ceil(overheadpressWeight.weekTwo()))
-            setThreeWeight.text = "3 x " + String(ceil(overheadpressWeight.weekTwo()))
-            setFourWeight.text = "3 x " + String(ceil(overheadpressWeight.weekTwo()))
-            setFiveWeight.text = "3 x " + String(ceil(overheadpressWeight.weekTwo()))
+            
+            overheadpressWeekTwoWeight = "3 x " + String(ceil(overheadpressWeight.weekTwo()))
+            setOneWeight.text = overheadpressWeekTwoWeight
+            setTwoWeight.text = overheadpressWeekTwoWeight
+            setThreeWeight.text = overheadpressWeekTwoWeight
+            setFourWeight.text = overheadpressWeekTwoWeight
+            setFiveWeight.text = overheadpressWeekTwoWeight
+            resetSwitches()
         }
             
         else if exercise == "Overhead Press" && week == "Week 3" {
-            setOneWeight.text = "2 x " + String(ceil(overheadpressWeight.weekThree()))
-            setTwoWeight.text = "2 x " + String(ceil(overheadpressWeight.weekThree()))
-            setThreeWeight.text = "2 x " + String(ceil(overheadpressWeight.weekThree()))
-            setFourWeight.text = "2 x " + String(ceil(overheadpressWeight.weekThree()))
-            setFiveWeight.text = "2 x " + String(ceil(overheadpressWeight.weekThree()))
+            overheadpressWeekThreeWeight = "2 x " + String(ceil(overheadpressWeight.weekThree()))
+            setOneWeight.text = overheadpressWeekThreeWeight
+            setTwoWeight.text = overheadpressWeekThreeWeight
+            setThreeWeight.text = overheadpressWeekThreeWeight
+            setFourWeight.text = overheadpressWeekThreeWeight
+            setFiveWeight.text = overheadpressWeekThreeWeight
+            resetSwitches()
         }
             
         else if exercise == "Overhead Press" && week == "Week 4" {
-            setOneWeight.text = "1 x " + String(ceil(overheadpressWeight.weekFour()))
-            setTwoWeight.text = "1 x " + String(ceil(overheadpressWeight.weekFour()))
-            setThreeWeight.text = "1 x " + String(ceil(overheadpressWeight.weekFour()))
-            setFourWeight.text = "1 x " + String(ceil(overheadpressWeight.weekFour()))
-            setFiveWeight.text = "1 x " + String(ceil(overheadpressWeight.weekFour()))
+            overheadpressWeekFourWeight = "1 x " + String(ceil(overheadpressWeight.weekFour()))
+            setOneWeight.text = overheadpressWeekFourWeight
+            setTwoWeight.text = overheadpressWeekFourWeight
+            setThreeWeight.text = overheadpressWeekFourWeight
+            setFourWeight.text = overheadpressWeekFourWeight
+            setFiveWeight.text = overheadpressWeekFourWeight
+            resetSwitches()
         }
             
         // Deadlift
         
         else if exercise == "Deadlift" && week == "Week 1" {
-            setOneWeight.text = "5 x " + String(ceil(deadliftWeight.weekOne()))
-            setTwoWeight.text = "5 x " + String(ceil(deadliftWeight.weekOne()))
-            setThreeWeight.text = "5 x " + String(ceil(deadliftWeight.weekOne()))
-            setFourWeight.text = "5 x " + String(ceil(deadliftWeight.weekOne()))
-            setFiveWeight.text = "5 x " + String(ceil(deadliftWeight.weekOne()))
+            deadliftWeekOneWeight = "5 x " + String(ceil(deadliftWeight.weekOne()))
+            setOneWeight.text = deadliftWeekOneWeight
+            setTwoWeight.text = deadliftWeekOneWeight
+            setThreeWeight.text = deadliftWeekOneWeight
+            setFourWeight.text = deadliftWeekOneWeight
+            setFiveWeight.text = deadliftWeekOneWeight
+            resetSwitches()
             
         }
             
         else if exercise == "Deadlift" && week == "Week 2" {
-            setOneWeight.text = "3 x " + String(ceil(deadliftWeight.weekTwo()))
-            setTwoWeight.text = "3 x " + String(ceil(deadliftWeight.weekTwo()))
-            setThreeWeight.text = "3 x " + String(ceil(deadliftWeight.weekTwo()))
-            setFourWeight.text = "3 x " + String(ceil(deadliftWeight.weekTwo()))
-            setFiveWeight.text = "3 x " + String(ceil(deadliftWeight.weekTwo()))
+            deadliftWeekTwoWeight = "3 x " + String(ceil(deadliftWeight.weekTwo()))
+            setOneWeight.text = deadliftWeekTwoWeight
+            setTwoWeight.text = deadliftWeekTwoWeight
+            setThreeWeight.text = deadliftWeekTwoWeight
+            setFourWeight.text = deadliftWeekTwoWeight
+            setFiveWeight.text = deadliftWeekTwoWeight
+            resetSwitches()
         }
             
         else if exercise == "Deadlift" && week == "Week 3" {
-            setOneWeight.text = "2 x " + String(ceil(deadliftWeight.weekThree()))
-            setTwoWeight.text = "2 x " + String(ceil(deadliftWeight.weekThree()))
-            setThreeWeight.text = "2 x " + String(ceil(deadliftWeight.weekThree()))
-            setFourWeight.text = "2 x " + String(ceil(deadliftWeight.weekThree()))
-            setFiveWeight.text = "2 x " + String(ceil(deadliftWeight.weekThree()))
+            deadliftWeekThreeWeight = "2 x " + String(ceil(deadliftWeight.weekThree()))
+            setOneWeight.text = deadliftWeekThreeWeight
+            setTwoWeight.text = deadliftWeekThreeWeight
+            setThreeWeight.text = deadliftWeekThreeWeight
+            setFourWeight.text = deadliftWeekThreeWeight
+            setFiveWeight.text = deadliftWeekThreeWeight
+            resetSwitches()
         }
             
         else if exercise == "Deadlift" && week == "Week 4" {
-            setOneWeight.text = "1 x " + String(ceil(deadliftWeight.weekFour()))
-            setTwoWeight.text = "1 x " + String(ceil(deadliftWeight.weekFour()))
-            setThreeWeight.text = "1 x " + String(ceil(deadliftWeight.weekFour()))
-            setFourWeight.text = "1 x " + String(ceil(deadliftWeight.weekFour()))
-            setFiveWeight.text = "1 x " + String(ceil(deadliftWeight.weekFour()))
+            deadliftWeekFourWeight = "1 x " + String(ceil(deadliftWeight.weekFour()))
+            setOneWeight.text = deadliftWeekFourWeight
+            setTwoWeight.text = deadliftWeekFourWeight
+            setThreeWeight.text = deadliftWeekFourWeight
+            setFourWeight.text = deadliftWeekFourWeight
+            setFiveWeight.text = deadliftWeekFourWeight
+            resetSwitches()
         }
         
         // Bench Press
         
         else if exercise == "Bench Press" && week == "Week 1" {
-            setOneWeight.text = "5 x " + String(ceil(benchpressWeight.weekOne()))
-            setTwoWeight.text = "5 x " + String(ceil(benchpressWeight.weekOne()))
-            setThreeWeight.text = "5 x " + String(ceil(benchpressWeight.weekOne()))
-            setFourWeight.text = "5 x " + String(ceil(benchpressWeight.weekOne()))
-            setFiveWeight.text = "5 x " + String(ceil(benchpressWeight.weekOne()))
+            benchpressWeekOneWeight = "5 x " + String(ceil(benchpressWeight.weekOne()))
+            setOneWeight.text = benchpressWeekOneWeight
+            setTwoWeight.text = benchpressWeekOneWeight
+            setThreeWeight.text = benchpressWeekOneWeight
+            setFourWeight.text = benchpressWeekOneWeight
+            setFiveWeight.text = benchpressWeekOneWeight
+            resetSwitches()
             
         }
             
         else if exercise == "Bench Press" && week == "Week 2" {
-            setOneWeight.text = "3 x " + String(ceil(benchpressWeight.weekTwo()))
-            setTwoWeight.text = "3 x " + String(ceil(benchpressWeight.weekTwo()))
-            setThreeWeight.text = "3 x " + String(ceil(benchpressWeight.weekTwo()))
-            setFourWeight.text = "3 x " + String(ceil(benchpressWeight.weekTwo()))
-            setFiveWeight.text = "3 x " + String(ceil(benchpressWeight.weekTwo()))
+            benchpressWeekTwoWeight = "3 x " + String(ceil(benchpressWeight.weekTwo()))
+            setOneWeight.text = benchpressWeekTwoWeight
+            setTwoWeight.text = benchpressWeekTwoWeight
+            setThreeWeight.text = benchpressWeekTwoWeight
+            setFourWeight.text = benchpressWeekTwoWeight
+            setFiveWeight.text = benchpressWeekTwoWeight
+            resetSwitches()
         }
             
         else if exercise == "Bench Press" && week == "Week 3" {
-            setOneWeight.text = "2 x " + String(ceil(benchpressWeight.weekThree()))
-            setTwoWeight.text = "2 x " + String(ceil(benchpressWeight.weekThree()))
-            setThreeWeight.text = "2 x " + String(ceil(benchpressWeight.weekThree()))
-            setFourWeight.text = "2 x " + String(ceil(benchpressWeight.weekThree()))
-            setFiveWeight.text = "2 x " + String(ceil(benchpressWeight.weekThree()))
+            benchpressWeekThreeWeight = "2 x " + String(ceil(benchpressWeight.weekThree()))
+            setOneWeight.text = benchpressWeekThreeWeight
+            setTwoWeight.text = benchpressWeekThreeWeight
+            setThreeWeight.text = benchpressWeekThreeWeight
+            setFourWeight.text = benchpressWeekThreeWeight
+            setFiveWeight.text = benchpressWeekThreeWeight
+            resetSwitches()
         }
             
         else if exercise == "Bench Press" && week == "Week 4" {
-            setOneWeight.text = "1 x " + String(ceil(benchpressWeight.weekFour()))
-            setTwoWeight.text = "1 x " + String(ceil(benchpressWeight.weekFour()))
-            setThreeWeight.text = "1 x " + String(ceil(benchpressWeight.weekFour()))
-            setFourWeight.text = "1 x " + String(ceil(benchpressWeight.weekFour()))
-            setFiveWeight.text = "1 x " + String(ceil(benchpressWeight.weekFour()))
+            benchpressWeekFourWeight = "1 x " + String(ceil(benchpressWeight.weekFour()))
+            setOneWeight.text = benchpressWeekFourWeight
+            setTwoWeight.text = benchpressWeekFourWeight
+            setThreeWeight.text = benchpressWeekFourWeight
+            setFourWeight.text = benchpressWeekFourWeight
+            setFiveWeight.text = benchpressWeekFourWeight
+            resetSwitches()
         }
         
         
     }
+    
+    
+    func resetSwitches () {
+        setOneSwitch.isOn = false
+        setTwoSwitch.isOn = false
+        setThreeSwitch.isOn = false
+        setFourSwitch.isOn = false
+        setFiveSwitch.isOn = false
+    }
+    
+    // dismisses the number pad when tapped outside of it's field
+    override func touchesBegan(_ touches: Set<UITouch>,
+                               with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     
     
 }
