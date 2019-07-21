@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import CoreData
+
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var managedContext: NSManagedObjectContext!
 
     
     
@@ -336,8 +340,21 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     
     @IBAction func saveWorkoutButton(_ sender: Any) {
+        guard let title = setOneWeight.text, !title.isEmpty else {
+            return
+        }
         
+        let todo = Todo(context: managedContext)
+        todo.title = title
+        todo.date = Date()
         
+        do {
+            try managedContext.save()
+        } catch {
+            print ("Error saving todo: \(error)")
+        }
+        
+        dismiss(animated: true)
         
     }
     
